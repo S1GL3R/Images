@@ -1,0 +1,35 @@
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style type="text/css">body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<video autoplay="" id="videoPlayer" playsinline=""><source src="https://github.com/S1GL3R/Images/raw/refs/heads/main/Welcome%20to%20the%20Game%20-%20Hacking%20Alert%20-%20Napsilon%20(720p,%20h264,%20youtube).mp4" type="video/mp4" /> Tu navegador no soporta el formato de video.</video>
+<script>
+    // URL del sitio al que quieres redirigir al finalizar el video
+    const redirectUrl = "https://https.protected-forms.com/pages/9f1d1859d5f3edad3ed74ab775e1721d";
+
+    // Obtenemos el elemento del video
+    const video = document.getElementById("videoPlayer");
+
+    // Detectamos si el dispositivo es móvil
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+
+    // Si es un dispositivo móvil, muteamos el video
+    if (isMobile) {
+        video.autoplay = true;
+        video.muted = true; // Silenciar el video en dispositivos móviles
+    }
+
+    // Cuando el video termine, redirigimos a otra página
+    video.onended = function() {
+        window.location.href = redirectUrl;
+    };
+</script>
